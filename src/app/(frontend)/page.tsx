@@ -1,8 +1,6 @@
 import { headers as getHeaders } from 'next/headers.js'
-import Image from 'next/image'
 import { getPayload } from 'payload'
 import React from 'react'
-import { fileURLToPath } from 'url'
 
 import config from '@/payload.config'
 import './styles.css'
@@ -13,47 +11,47 @@ export default async function HomePage() {
   const payload = await getPayload({ config: payloadConfig })
   const { user } = await payload.auth({ headers })
 
-  const fileURL = `vscode://file/${fileURLToPath(import.meta.url)}`
-
   return (
-    <div className="home">
-      <div className="content">
-        <picture>
-          <source srcSet="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-favicon.svg" />
-          <Image
-            alt="Payload Logo"
-            height={65}
-            src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-favicon.svg"
-            width={65}
-          />
-        </picture>
-        {!user && <h1>Welcome to your new project.</h1>}
-        {user && <h1>Welcome back, {user.email}</h1>}
-        <div className="links">
-          <a
-            className="admin"
-            href={payloadConfig.routes.admin}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Go to admin panel
-          </a>
-          <a
-            className="docs"
-            href="https://payloadcms.com/docs"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Documentation
-          </a>
-        </div>
+    <main className="home">
+      <div className="logo">
+        <img
+          alt="Hecta Consulting Logo"
+          height={200}
+          src="https://res.cloudinary.com/ddczkq79u/image/upload/v1/media/hecta_logo-1.jpeg?_a=BAMAABXy0"
+          width={200}
+        />
       </div>
-      <div className="footer">
-        <p>Update this page by editing</p>
-        <a className="codeLink" href={fileURL}>
-          <code>app/(frontend)/page.tsx</code>
+
+      <h1>
+        {user ? `Welcome, ${user.email.split('@')[0]}` : 'Hecta Consulting Content Management'}
+      </h1>
+
+      <p className="subtitle">
+        Use the admin panel to manage your website's blog posts and content.
+      </p>
+
+      <div className="links">
+        <a
+          className="admin"
+          href={payloadConfig.routes.admin}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Admin Panel
+        </a>
+        <a
+          className="docs"
+          href="https://payloadcms.com/docs"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Payload Docs
         </a>
       </div>
-    </div>
+
+      <footer className="footer">
+        <p>This is the CMS homepage. The public-facing website is separate.</p>
+      </footer>
+    </main>
   )
 }

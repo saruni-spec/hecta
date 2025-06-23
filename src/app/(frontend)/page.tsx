@@ -27,7 +27,7 @@ export default async function HomePage() {
       </h1>
 
       <p className="subtitle">
-        Use the admin panel to manage your website's blog posts and content.
+        Use the admin panel to manage your website&apos;s blog posts and content.
       </p>
 
       <div className="links">

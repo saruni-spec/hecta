@@ -67,6 +67,9 @@ export default buildConfig({
     'http://127.0.0.1:5500',
     'http://localhost:5500',
     'https://www.hectaconsulting.com',
+    'https://hectaconsulting.com/news_letter.html',
+    'hectaconsulting.com/news_letter.html',
+    'hectaconsulting.com',
   ],
   admin: {
     user: Users.slug,

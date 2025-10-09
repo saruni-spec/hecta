@@ -66,11 +66,17 @@ export default buildConfig({
     'http://localhost:3000',
     'http://127.0.0.1:5500',
     'http://localhost:5500',
+    'https://hectaconsulting.com',
     'https://www.hectaconsulting.com',
-    'https://hectaconsulting.com/news_letter.html',
-    'hectaconsulting.com/news_letter.html',
-    'hectaconsulting.com',
   ],
+  csrf: [
+    'http://localhost:3000',
+    'http://127.0.0.1:5500',
+    'http://localhost:5500',
+    'https://hectaconsulting.com',
+    'https://www.hectaconsulting.com',
+  ],
+
   admin: {
     user: Users.slug,
     importMap: {

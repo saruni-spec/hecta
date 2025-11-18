@@ -6,6 +6,10 @@ const allowed_origins = [
   'http://localhost:3000',
   'http://127.0.0.1:5500',
   'http://localhost:5500',
+  'https://www.hectaconsulting.com/',
+  'https://hectaconsulting.com/',
+  'https://hecta-consulting.vercel.app/',
+  'https://hecta-consulting.vercel.app',
 ]
 
 export function middleware(req: Request) {

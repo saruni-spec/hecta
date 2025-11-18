@@ -3,13 +3,10 @@ import { NextResponse } from 'next/server'
 const allowed_origins = [
   'https://hectaconsulting.com',
   'https://www.hectaconsulting.com',
-  'http://localhost:3000',
-  'http://127.0.0.1:5500',
-  'http://localhost:5500',
-  'https://www.hectaconsulting.com/',
-  'https://hectaconsulting.com/',
-  'https://hecta-consulting.vercel.app/',
   'https://hecta-consulting.vercel.app',
+  'http://localhost:3000',
+  'http://localhost:5500',
+  'http://127.0.0.1:5500',
 ]
 
 export function middleware(req: Request) {

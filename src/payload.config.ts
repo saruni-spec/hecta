@@ -68,6 +68,7 @@ export default buildConfig({
     'http://localhost:5500',
     'https://hectaconsulting.com',
     'https://www.hectaconsulting.com',
+    'https://hecta-consulting.vercel.app',
   ],
   csrf: [
     'http://localhost:3000',
@@ -75,6 +76,7 @@ export default buildConfig({
     'http://localhost:5500',
     'https://hectaconsulting.com',
     'https://www.hectaconsulting.com',
+    'https://hecta-consulting.vercel.app',
   ],
 
   admin: {
